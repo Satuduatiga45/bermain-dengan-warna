@@ -1,35 +1,36 @@
-* {
-  padding: 0;
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-h1 {
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  margin-top: 10px;
+}
+h1 {
   font-size: 45px;
   font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
-div {
-  height: 75px;
-  width: 75px;
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 20px
+button {
+  border-radius: 5px;
+  padding: 5px 10px
 }
 
-input {
-  display: block;
-  margin: auto;
+.kotak {
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
 }
 
-.red {
+.merah {
   background-color: red;
 }
-.green {
+.hijau {
   background-color: green;
 }
-.blue {
+.biru {
   background-color: blue;
+}
+
+.rgb {
+  font-size: 20px;
+  margin-top: 30px;
 }
