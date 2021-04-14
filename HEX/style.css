@@ -1,0 +1,44 @@
+a.navbar-brand {
+  font-size: 25px;
+}
+
+ul li a {
+  font-size: 20px;
+  margin-right: 20px;
+
+}
+
+a.navbar-brand {
+  font-size: 25px;
+  color: black;
+}
+
+ul li a {
+  font-size: 20px;
+  margin-right: 20px;
+  color: black;
+}
+
+.warna {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+button {
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+#hex {
+  font-size: 100px;
+  margin-top: 100px;
+}

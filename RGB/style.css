@@ -1,0 +1,67 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+button {
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+.kotak {
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+}
+
+.merah {
+  background-color: red;
+}
+
+.hijau {
+  background-color: green;
+}
+
+.biru {
+  background-color: blue;
+}
+
+.rgb {
+  font-size: 20px;
+  margin-top: 75px;
+}
+
+a.navbar-brand {
+  font-size: 25px;
+  color: black;
+}
+
+ul li a {
+  font-size: 20px;
+  margin-right: 20px;
+  color: black;
+}
+
+.warna {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15%;
+}
+
+nav {
+  opacity: 1;
+}
+
+.bg-body {
+  background-color: black;
+}

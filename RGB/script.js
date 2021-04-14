@@ -1,4 +1,4 @@
-const button = document.querySelector('button');
+const button = document.querySelector('button#acak-warna');
 const p = document.querySelector('.rgb');
 
 const kotakMerah = document.querySelector('div.merah');
@@ -10,12 +10,19 @@ const sHijau = document.querySelector('input[name="sHijau"]');
 const kotakBiru = document.querySelector('div.biru');
 const sBiru = document.querySelector('input[name="sBiru"]');
 
-button.addEventListener('click', function () {
+const warna = document.querySelector('.warna');
 
-  const r = Math.ceil(Math.random() * 255);
-  const g = Math.ceil(Math.random() * 255);
-  const b = Math.ceil(Math.random() * 255);
+sMerah.value = 255;
+sHijau.value = 255;
+sBiru.value = 255;
+
+button.addEventListener('click', function () {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
   document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+  warna.style.backgroundColor = `rgb(${r},${g},${b})`;
+  button.style.backgroundColor = `rgb(${r},${g},${b})`;
   sMerah.value = r;
   sHijau.value = g;
   sBiru.value = b;
@@ -29,6 +36,8 @@ sMerah.addEventListener('input', function () {
   const b = sBiru.value;
   kotakMerah.style.backgroundColor = `rgb(${r},0,0)`;
   document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+  warna.style.backgroundColor = `rgb(${r},${g},${b})`;
+  button.style.backgroundColor = `rgb(${r},${g},${b})`;
   p.innerHTML = `rgb(${r},${g},${b})`;
 });
 
@@ -38,6 +47,8 @@ sHijau.addEventListener('input', function () {
   const b = sBiru.value;
   kotakHijau.style.backgroundColor = `rgb(0,${g},0)`;
   document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+  warna.style.backgroundColor = `rgb(${r},${g},${b})`;
+  button.style.backgroundColor = `rgb(${r},${g},${b})`;
   p.innerHTML = `rgb(${r},${g},${b})`;
 });
 
@@ -47,5 +58,7 @@ sBiru.addEventListener('input', function () {
   const b = sBiru.value;
   kotakBiru.style.backgroundColor = `rgb(0,0,${b})`;
   document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+  warna.style.backgroundColor = `rgb(${r},${g},${b})`;
+  button.style.backgroundColor = `rgb(${r},${g},${b})`;
   p.innerHTML = `rgb(${r},${g},${b})`;
 });
