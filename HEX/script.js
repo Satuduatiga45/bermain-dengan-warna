@@ -2,6 +2,13 @@ const button = document.getElementById('acak-warna');
 const hex = document.getElementById('hex');
 const warna = document.getElementsByClassName('warna')[0];
 
+const ul = document.querySelector('nav ul');
+const nav = document.querySelector('nav');
+const menu = document.querySelector('.menu');
+const span1 = document.querySelector('.menu span:nth-child(1)');
+const span2 = document.querySelector('.menu span:nth-child(2)');
+const span3 = document.querySelector('.menu span:nth-child(3)');
+
 button.addEventListener('click', function () {
   let c1 = Math.floor(Math.random() * 16);
   let c2 = Math.floor(Math.random() * 16);
@@ -136,5 +143,54 @@ button.addEventListener('click', function () {
   document.body.style.backgroundColor = color;
   button.style.backgroundColor = color;
   warna.style.backgroundColor = color;
+  ul.style.backgroundColor = color;
+  nav.style.backgroundColor = color;
   hex.innerHTML = color;
+});
+
+
+// Navbar
+let on = false;
+
+menu.addEventListener('click', function () {
+
+  if (on === false) {
+    // span1
+    span1.style.transformOrigin = "0 0";
+    span1.style.transform = "rotate(45deg) translate(-1px,-1px)";
+    // span2
+    span2.style.display = 'none';
+    span2.style.transform = "scale(0)";
+    // span3
+    span3.style.transformOrigin = "0 100%";
+    span3.style.transform = "rotate(-45deg) translate(-1px,0)";
+
+    ul.classList.toggle('slide');
+    warna.style.zIndex = "-2";
+
+
+    on = true;
+  } else if (on === true) {
+    // span1
+    span1.style.transformOrigin = "0 0";
+    span1.style.transform = "rotate(0)";
+    // span2
+    span2.style.display = 'block';
+    span2.style.transform = "scale(1)";
+    // span3
+    span3.style.transformOrigin = "0 100%";
+    span3.style.transform = "rotate(00)";
+
+    ul.classList.toggle('slide');
+    warna.style.zIndex = "0";
+
+
+    on = false;
+  }
+
+
+
+
+
+
 });

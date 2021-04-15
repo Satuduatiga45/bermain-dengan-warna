@@ -1,22 +1,6 @@
-a.navbar-brand {
-  font-size: 25px;
-}
-
-ul li a {
-  font-size: 20px;
-  margin-right: 20px;
-
-}
-
-a.navbar-brand {
-  font-size: 25px;
-  color: black;
-}
-
-ul li a {
-  font-size: 20px;
-  margin-right: 20px;
-  color: black;
+* {
+  padding: 0;
+  margin: 0;
 }
 
 .warna {
@@ -27,7 +11,7 @@ ul li a {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
 
@@ -41,4 +25,91 @@ button {
 #hex {
   font-size: 100px;
   margin-top: 100px;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  background-color: white;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 10%;
+  justify-content: space-evenly;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.603)
+}
+
+nav ul li a:hover {
+  color: #000
+}
+
+/* Hamburger Menu */
+.menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+  transition: transform 0.5s;
+}
+
+/* Responsive Navbar */
+
+/* tablet */
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 20%;
+  }
+}
+
+/* phone */
+@media screen and (max-width: 576px) {
+  nav ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    height: 30vh;
+    justify-content: space-evenly;
+    background-color: white;
+    align-items: center;
+    z-index: -1;
+    width: 100%;
+    transition: all 1s;
+    transform: translateY(-100%)
+  }
+
+  nav ul.slide {
+    transform: translateY(20px)
+  }
+
+  nav {
+    box-shadow: none;
+    position: relative;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+
+
 }
